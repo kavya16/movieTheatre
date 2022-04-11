@@ -24,8 +24,11 @@ public class Main {
                 /* Read the content of the file into a bufferedReader. */
                 BufferedReader bufferedReader = readFile(args[0]);
 
+                File file = new File("output.txt");
+                FileWriter fileWriter = new FileWriter(file);
+
                 /* File to write assigned seats to the file */
-                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("output.txt"));
+                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
                 /* Read the first reservation */
                 String currentReservation = bufferedReader.readLine();
@@ -67,6 +70,9 @@ public class Main {
                 }
                 /* Finish writing to output file */
                 bufferedWriter.close();
+
+                /* print the path of output file */
+                System.out.println(file.getAbsolutePath());
             } catch (FileNotFoundException ex) {
                 ex.printStackTrace();
                 System.exit(1);
