@@ -35,4 +35,11 @@ R006 H0,H1,H2,H3,H4
 * If seats cannot be filled in one row, then seats will be split between different rows.
 
 ## Run the project
-* 
+Go to the Terminal inside the folder to execute the following commands
+* compile:
+javac -d output src/com/company/*.java src/com/company/services/*.java
+
+*Run:
+cd output
+java com.company.Main /Users/kavyalakshmiguttikonda/IdeaProjects/movieTheatre/sampleReservationFile.txt
+
